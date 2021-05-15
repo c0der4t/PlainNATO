@@ -1,0 +1,63 @@
+unit frmMain_u;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.ScrollBox, FMX.Memo;
+
+type
+  TForm1 = class(TForm)
+    memPlainText: TMemo;
+    memNatoText: TMemo;
+    btnClear: TButton;
+    procedure btnClearClick(Sender: TObject);
+    procedure memPlainTextKeyUp(Sender: TObject; var Key: Word;
+      var KeyChar: Char; Shift: TShiftState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+procedure TForm1.btnClearClick(Sender: TObject);
+begin
+  memNatoText.Text := StringReplace(memNatoText.Text, 'B', ' BRAVO ',
+    [rfReplaceAll]);
+end;
+
+procedure TForm1.memPlainTextKeyUp(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
+var
+  I: integer;
+  old, New, Temp: string;
+begin
+  memNatoText.Lines.Clear;
+  old := memPlainText.Text;
+  New := '';
+  Temp := '';
+  for I := 1 to Length(memNatoText.Text) do
+  begin
+    Temp := Copy(old, I, 1);
+    Delete(old, I, 1);
+    if Temp = 'A' then
+      Temp := 'ALPHA';
+    'B': Temp := 'BRAVO';
+    'C': Temp := 'CHARLIE';
+    'D': Temp := 'DELTA';
+  end; // CASE
+  New := New + Temp;
+end; // For
+memNatoText.Text := New;
+end;
+
+end.

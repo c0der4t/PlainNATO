@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019/11/15 08:39:29.818,=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/11/15 08:41:47.150,C:\Users\User\Documents\RAD Studio\Projects\Phonetic Generator\frmMain_u.pas=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/11/15 08:41:47.150,C:\Users\User\Documents\RAD Studio\Projects\Phonetic Generator\frmMain_u.fmx=C:\Users\User\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2019/11/15 08:42:06.201,C:\Users\User\Documents\RAD Studio\Projects\Phonetic Generator\PhoneGenerator_p.dproj=C:\Users\User\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+  <ActiveMobileDevice>   <NoProfile iOSSimulator="iPhone5"/>
+  </ActiveMobileDevice>
+</BorlandProject>
